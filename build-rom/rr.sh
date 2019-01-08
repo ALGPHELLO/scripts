@@ -8,7 +8,7 @@
 
 # rrkenzobot has scripts for me to be able to spam a group with a bot :P
 
-ADCSCRIPT="/home/akhil/android_development_shell_tools"
+ADCSCRIPT="/home/algphello/android_development_shell_tools"
 if [ -f "${ADCSCRIPT}/android_development_shell_tools.rc" ]
 then
 source "${ADCSCRIPT}/android_development_shell_tools.rc"
@@ -22,7 +22,7 @@ if [[ "${repoSync}" = "yes" ]]; then
     time reposy
 fi
 export USE_CCACHE=1
-export CCACHE_DIR="/home/akhil/.ccache"
+export CCACHE_DIR="/home/algphello/.ccache"
 ccache -M 200
 export days_to_log=7
 source build/envsetup.sh
@@ -36,7 +36,7 @@ eval ${THIS_WILL_BE_RUN}
 if [ ${RR_BUILDTYPE} == "Official" ]; then
 bash ~/rrkenzobot/lineage.sh "[Starting $(date +%Y%m%d) RR ${DEVICE} ${RR_BUILDTYPE} build]($BUILD_URL)"
 fi
-cp -v ota/akhil/${DEVICE}.conf ./ota_conf
+cp -v ota/algphello/${DEVICE}.conf ./ota_conf
 time mka bacon
 exitCode=$?
 if [ ${exitCode} -eq 0 ]
@@ -53,7 +53,7 @@ bash ~/rrkenzobot/jenkins.sh "Build successful, uploading!"
 curl --ftp-pasv --upload-file "${OUT}/${RRZIP}" ftp://localhost/downloads.resurrectionremix.com/${DEVICE}/
 curl --ftp-pasv --upload-file "${OUT}/${RRZIP}.md5sum" ftp://localhost/downloads.resurrectionremix.com/${DEVICE}/
 curl --ftp-pasv --upload-file "${OUT}/*Changelog*.txt" ftp://localhost/downloads.resurrectionremix.com/${DEVICE}/Changelog.txt
-cp $OUT/RR*.txt ota/akhil/Changelog.txt
+cp $OUT/RR*.txt ota/algphello/Changelog.txt
 cd ota; git add -A
 ~/rr-o/ota/ota-gen.sh "${DEVICE}" "${RRZIP}"
 bash ~/rrkenzobot/jenkins.sh "[$RRZIP](https://downloads.resurrectionremix.com/${DEVICE}/${RRZIP})
@@ -64,12 +64,12 @@ MD5sum - $rrmd5
 
 FileSize - $size"
 else
-bash ~/rrkenzobot/akhil.sh "${DEVICE} build done."
+bash ~/rrkenzobot/algphello.sh "${DEVICE} build done."
 fi
-rsync -av "${OUT}/${RRZIP}" ~/rr.akhilnarang.me/${DEVICE}/
-echo -e "Grab it at http://rr.akhilnarang.me/${DEVICE}/${RRZIP}"
+rsync -av "${OUT}/${RRZIP}" ~/rr.algphello.me/${DEVICE}/
+echo -e "Grab it at http://rr.algphello.me/${DEVICE}/${RRZIP}"
 else
-bash ~/rrkenzobot/lineage.sh "${DEVICE} BUILD FAILED, RIP in pieces @akhilnarang."
+bash ~/rrkenzobot/lineage.sh "${DEVICE} BUILD FAILED, RIP in pieces @algphello."
 fi
 echo -e "Killing jack server!"
 jack-admin stop-server

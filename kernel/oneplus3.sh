@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Custom build script by Akhil for Derp Kernel
+# Custom build script by algphello for Derp Kernel
 
 # These won't change
 

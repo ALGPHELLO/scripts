@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cd /tmp || exit 1
-git clone git://github.com/akhilnarang/flex.git
+git clone git://github.com/algphello/flex.git
 cd flex || exit 1
 ./autogen.sh
 ./configure

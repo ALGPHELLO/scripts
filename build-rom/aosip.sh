@@ -53,9 +53,9 @@ time mka kronic
 if [ $? -eq 0 ]; then
   cd $OUT
   AOSIP_ZIP="$(ls AOSiP*.zip)"
-  rsync -av "${AOSIP_ZIP}" "akhil@aosiprom.com:/home/kronic/aosiprom.com/.dothidden/akhil/${DEVICE}/"
+  rsync -av "${AOSIP_ZIP}" "algphello@aosiprom.com:/home/kronic/aosiprom.com/.dothidden/algphello/${DEVICE}/"
   cd -
-  DOWNLOAD_URL="http://aosiprom.com/.dothidden/akhil/${DEVICE}/${AOSIP_ZIP}"
+  DOWNLOAD_URL="http://aosiprom.com/.dothidden/algphello/${DEVICE}/${AOSIP_ZIP}"
   bash ~/kronicbot/aosip_testers.sh "[$AOSIP_ZIP](${DOWNLOAD_URL})"
   if [[ "${DEVICE}" = "oneplus3" ]]; then
     bash ~/kronicbot/3_t_testers.sh "[$AOSIP_ZIP](${DOWNLOAD_URL})"

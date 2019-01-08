@@ -3,8 +3,8 @@
 AOSIP_PATH=$PWD
 bash ~/kronicbot/send_tg_nomd.sh -1001055786180 "Merging in ${TAG}"
 bash ~/kronicbot/send_tg.sh -1001055786180 "Check progress [here]($BUILD_URL)!"
-git config --global user.name "Akhil's Lazy Buildbot"
-git config --global user.email "jenkins@akhilnarang.me"
+git config --global user.name "algphello's Lazy Buildbot"
+git config --global user.email "jenkins@algphello.me"
 git config --global user.signingkey 219187E8
 
 do_not_merge="vendor/aosip manifest updater packages/apps/OmniSwitch packages/apps/OmniStyle \
@@ -76,6 +76,6 @@ FAILED=$(cat $AOSIP_PATH/failed)
 bash ~/kronicbot/send_tg.sh "-1001055786180" "Failed repos:"
 bash ~/kronicbot/send_tg.sh "-1001055786180" $FAILED
 
-git config --global user.name "Akhil Narang"
-git config --global user.email "akhilnarang.1999@gmail.com"
+git config --global user.name "algphello Narang"
+git config --global user.email "algphello.1999@gmail.com"
 git config --global user.signingkey 944082E8

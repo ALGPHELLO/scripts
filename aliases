@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Copyright (C) 2018 Akhil Narang
+# Copyright (C) 2018 algphello Narang
 # SPDX-License-Identifier: GPL-3.0-only
 
 # Script with some aliases and exports
@@ -10,16 +10,16 @@ if [[ "$(command -v hub)" ]]; then
 fi
 
 # SSH aliases
-alias rr='mosh akhil@gerrit.resurrectionremix.com'
-alias aosip='mosh akhil@aosiprom.com'
+alias rr='mosh algphello@gerrit.resurrectionremix.com'
+alias aosip='mosh algphello@aosiprom.com'
 alias kronic='mosh kronic@aosiprom.com'
-alias jenkins='ssh ubuntu@aws.akhilnarang.me'
-alias bot='mosh bot@bot.akhilnarang.me'
-alias downloads='mosh akhil@downloads.akhilnarang.me'
-alias mirror='mosh akhil@mirror.akhilnarang.me'
-alias thog='mosh akhil@thog.akhilnarang.me'
-alias segfault='mosh akhil@segfault.akhilnarang.me'
-alias contabo='mosh akhil@olddroid.de'
+alias jenkins='ssh ubuntu@aws.algphello.me'
+alias bot='mosh bot@bot.algphello.me'
+alias downloads='mosh algphello@downloads.algphello.me'
+alias mirror='mosh algphello@mirror.algphello.me'
+alias thog='mosh algphello@thog.algphello.me'
+alias segfault='mosh algphello@segfault.algphello.me'
+alias contabo='mosh algphello@olddroid.de'
 
 # Miscellaneous aliases
 alias setperf='echo "performance" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
@@ -35,7 +35,7 @@ if [[ -f "${ADCSCRIPT}/android_development_shell_tools.rc" ]]; then
 fi
 
 # Some PATH changes and stuff only for my laptop
-if [[ "$(hostname)" == "randomness" || "$(hostname)" == "akhil-Lenovo-Y50-70" ]]; then
+if [[ "$(hostname)" == "randomness" || "$(hostname)" == "algphello-Lenovo-Y50-70" ]]; then
     # Extend the default PATH a bit
     export PATH=${HOME}/bin:${HOME}/android-studio/bin:${HOME}/pidcat:${HOME}/Android/Sdk/platform-tools:${HOME}/adb-sync:$PATH
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Copyright (C) 2018 Harsh 'MSF Jarvis' Shandilya
-# Copyright (C) 2018 Akhil Narang
+# Copyright (C) 2018 algphello Narang
 # SPDX-License-Identifier: GPL-3.0-only
 
 # Script to setup an AOSP Build environment on Ubuntu and Linux Mint
@@ -47,7 +47,7 @@ if [[ "$(command -v make)" ]]; then
 fi
 
 echo "Installing repo"
-sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://github.com/akhilnarang/repo/raw/master/repo
+sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://github.com/algphello/repo/raw/master/repo
 sudo chmod a+x /usr/local/bin/repo
 
 bash ./setup/ccache.sh
