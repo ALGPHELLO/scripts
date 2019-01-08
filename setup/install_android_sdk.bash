@@ -3,7 +3,7 @@
 if [ "${BASH_SOURCE[0]}" -ef "$0" ]
 then
     echo "This script relies on information from your environment and thus should be sourced."
-    exit 1
+    #exit 1
 fi
 
 # Script to setup the Android SDK on a Linux System
